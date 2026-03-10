@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome - Premium Experience</title>
+    <title>Raw. Bold. Unfiltered.</title>
     <style>
         * {
             margin: 0;
@@ -12,117 +12,160 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Courier New', monospace;
+            color: #000;
+            background: #0a0a0a;
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            padding: 20px;
         }
 
         .container {
-            max-width: 1000px;
-            width: 90%;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #1a1a1a;
+            border: 3px solid #000;
+            box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.5);
         }
 
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 80px 40px;
-            text-align: center;
+            background: #000;
+            color: #fff;
+            padding: 60px 40px;
+            border-bottom: 3px solid #fff;
+            position: relative;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            border-right: 4px solid #fff;
+            border-bottom: 4px solid #fff;
         }
 
         .header h1 {
-            font-size: 48px;
+            font-size: 72px;
             margin-bottom: 20px;
-            font-weight: 700;
+            font-weight: 900;
+            letter-spacing: 2px;
+            line-height: 1.1;
+            text-transform: uppercase;
         }
 
         .header p {
-            font-size: 18px;
-            opacity: 0.95;
-            margin-bottom: 30px;
+            font-size: 16px;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+            max-width: 500px;
         }
 
         .cta-button {
             display: inline-block;
-            background: white;
-            color: #667eea;
-            padding: 14px 40px;
-            border-radius: 50px;
+            background: #fff;
+            color: #000;
+            padding: 16px 32px;
+            border: 3px solid #000;
             text-decoration: none;
-            font-weight: 600;
-            transition: transform 0.3s, box-shadow 0.3s;
+            font-weight: 900;
             cursor: pointer;
-            border: none;
-            font-size: 16px;
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.1s;
+            font-family: 'Courier New', monospace;
         }
 
         .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            background: #000;
+            color: #fff;
+            transform: translate(2px, 2px);
+            box-shadow: -3px -3px 0 #fff;
+        }
+
+        .cta-button:active {
+            transform: translate(4px, 4px);
         }
 
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            padding: 60px 40px;
-            background: #f8f9fa;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            background: #1a1a1a;
         }
 
         .feature-card {
-            text-align: center;
+            padding: 40px;
+            border-right: 2px solid #333;
+            border-bottom: 2px solid #333;
+            position: relative;
+        }
+
+        .feature-card:nth-child(3n) {
+            border-right: none;
+        }
+
+        .feature-card:nth-child(n + 7) {
+            border-bottom: none;
         }
 
         .feature-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            background: #fff;
+            border: 3px solid #000;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 28px;
+            margin-bottom: 20px;
+            font-size: 36px;
+            color: #000;
+            font-weight: bold;
         }
 
         .feature-card h3 {
-            font-size: 20px;
-            margin-bottom: 12px;
-            color: #333;
+            font-size: 18px;
+            margin-bottom: 16px;
+            color: #fff;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 900;
         }
 
         .feature-card p {
-            color: #666;
-            line-height: 1.6;
+            color: #aaa;
+            line-height: 1.8;
+            font-size: 14px;
         }
 
         .footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 30px;
-            font-size: 14px;
+            background: #000;
+            color: #fff;
+            text-align: right;
+            padding: 20px 40px;
+            border-top: 3px solid #fff;
+            font-size: 12px;
+            letter-spacing: 1px;
         }
 
         @media (max-width: 768px) {
             .header h1 {
-                font-size: 36px;
+                font-size: 48px;
             }
 
             .header {
-                padding: 50px 30px;
+                padding: 40px 20px;
             }
 
             .features {
-                padding: 40px 20px;
-                gap: 30px;
+                grid-template-columns: 1fr;
+            }
+
+            .feature-card {
+                border-right: none !important;
+                border-bottom: 2px solid #333 !important;
             }
         }
     </style>
@@ -130,33 +173,34 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Welcome to Excellence</h1>
-            <p>Experience the future of modern design and innovation</p>
-            <button class="cta-button">Get Started</button>
+            <h1>BRUTAL
+DESIGN</h1>
+            <p>No curves. No compromises. Pure industrial structure.</p>
+            <button class="cta-button">Enter</button>
         </div>
 
         <div class="features">
             <div class="feature-card">
-                <div class="feature-icon">✨</div>
-                <h3>Beautiful Design</h3>
-                <p>Crafted with precision and attention to every detail for a stunning visual experience.</p>
+                <div class="feature-icon">■</div>
+                <h3>Stripped Down</h3>
+                <p>Removed all unnecessary elements. Only what matters remains.</p>
             </div>
 
             <div class="feature-card">
-                <div class="feature-icon">⚡</div>
-                <h3>Lightning Fast</h3>
-                <p>Optimized performance that delivers exceptional speed and responsiveness.</p>
+                <div class="feature-icon">▲</div>
+                <h3>Raw Materials</h3>
+                <p>Concrete, steel, black and white. Honest construction visible.</p>
             </div>
 
             <div class="feature-card">
-                <div class="feature-icon">🔒</div>
-                <h3>Secure & Safe</h3>
-                <p>Enterprise-grade security to keep your data protected at all times.</p>
+                <div class="feature-icon">●</div>
+                <h3>No Frills</h3>
+                <p>Heavy borders. Bold text. Harsh lines. Pure function.</p>
             </div>
         </div>
 
         <div class="footer">
-            <p>&copy; 2026 Your Company. All rights reserved.</p>
+            <p>© 2026 / NEOBRUTALIST / ALL SYSTEMS GO</p>
         </div>
     </div>
 </body>
